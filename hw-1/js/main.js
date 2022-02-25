@@ -35,7 +35,12 @@ const renderProduct = product => {
 };
 const renderPage = list => {
     document.querySelector('.products').innerHTML = list.map(product => renderProduct(product)).join('');
-
+    /*
+    Запятые появляются в резултате вызова метода map(), который создаёт новый 
+    массив с результатами вызова указанной функции для каждого элемента 
+    массива product. Чтобы от них избавиться необходимо использовать метод
+    join(), указав в качестве сепаратора - ''.
+*/
 };
 
 renderPage(products);
