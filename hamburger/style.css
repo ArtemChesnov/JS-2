@@ -6,6 +6,8 @@
     max-width: 700px;
 }
 
+
+
 .burger__list {
     display: flex;
     justify-content: center;
@@ -77,4 +79,8 @@
 .totalCalc-span {
     color: red;
 
+}
+
+.active {
+    background-color: yellowgreen;
 }
