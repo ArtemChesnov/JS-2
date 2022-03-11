@@ -1,0 +1,86 @@
+.container {
+    /* display: flex;
+    justify-content: space-around; */
+    position: relative;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+
+
+.burger__list {
+    display: flex;
+    justify-content: center;
+}
+
+.small__burder,
+.big__burder {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.small__burder {
+    margin: 0 50px 0 0;
+}
+
+.big__burder-btn,
+.small__burder-btn {
+    margin: 25px 0 0 0;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+
+.big__burder-btn:hover,
+.small__burder-btn:hover {
+    box-shadow: 1px 1px 1px 2px black;
+}
+
+.big__burder-btn:active,
+.small__burder-btn:active {
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: rgb(179, 162, 162);
+}
+
+.hamburger-fieldset-inside {
+    border: none;
+    margin: 0 0 0 95px;
+}
+
+.total-btn {
+    margin: 25px 0 0 295px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 15px 20px;
+}
+
+.total-btn:hover {
+    box-shadow: 1px 1px 1px 2px black;
+}
+
+.total-btn:active {
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: rgb(179, 162, 162);
+}
+
+.totalPrice,
+.totalCalc {
+    margin: 15px 0 0 450px;
+}
+
+.totalPrice-span,
+.totalCalc-span {
+    color: red;
+
+}
+
+.active {
+    background-color: yellowgreen;
+}
