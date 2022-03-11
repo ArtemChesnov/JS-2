@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework</title>
+</head>
+
+<body>
+    <div class="container">
+        <p class="text">One: 'Hi Mary.' Two: 'Oh, hi.'
+            One: 'How are you doing?'
+            Two: 'I'm doing alright. How about you?'
+            One: 'Not too bad. The weather is great isn't it?'
+            Two: 'Yes. It's absolutely beautiful today.'
+            One: 'I wish it was like this more frequently.'
+            Two: 'Me too.'
+            One: 'So where are you going now?'
+            Two: 'I'm going to meet a friend of mine at the department store.'
+            One: 'Going to do a little shopping?'
+            Two: 'Yeah, I have to buy some presents for my parents.'
+            One: 'What's the occasion?'
+            Two: 'It's their anniversary.'
+            One: 'That's great. Well, you better get going. You don't want to be late.'
+            Two: 'I'll see you next time.'
+            One: 'Sure. Bye.'</p>
+    </div>
+
+
+    <div class="form-box">
+        <form class="form">
+            <fieldset class="form__control">
+                <legend class="form__legend visually-hidden">form</legend>
+                <div class="box name-box">
+                    <label>
+                        <input id="name" class="input" type="text" placeholder="name">
+                        <span class="error-name visually-hidden"> Возможен ввод
+                            только букв.</span>
+                    </label>
+                </div>
+
+                <div class="box phone-box">
+                    <label>
+                        <input id="phone" class="input" type="tel" placeholder="+7(XXX)XXX-XXXX">
+                        <span class="error-phone visually-hidden">Запись должна
+                            соответствовать формату - +7(___)___-____.</span>
+                    </label>
+                </div>
+
+                <div class="box email-box">
+                    <label>
+                        <input id="email" class="input" placeholder="email">
+                        <span class="error-email visually-hidden">Запись должна
+                            соответствовать формату - email@email.ru.</span>
+                    </label>
+                </div>
+
+                <div class="box">
+                    <label>
+                        <textarea class="textarea" type="text" placeholder="text"></textarea>
+                    </label>
+                </div>
+            </fieldset>
+            <div class="button-box">
+                <button id='button' class="button" type="submit">join now</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        'use strict'
+
+        //Задания 1-2.
+
+        const textElOne = document.querySelector('.text').textContent.replace(/'/gi, `"`);
+        const textElTwo = document.querySelector('.text').textContent.replace(/\B(')|(')w/g, `"`);
+
+        function getTagOne() {
+            return `<p class="text">${textElOne}</p>`;
+        }
+
+        function getTagTwo() {
+            return `<p class="text">${textElTwo}</p>`;
+        }
+
+        document.querySelector('.text').insertAdjacentHTML('beforeend', getTagOne());
+        document.querySelector('.text').insertAdjacentHTML('beforeend', getTagTwo());
+
+
+        // Задание 3.
+
+        const regexp = {
+            name: /^[A-Za-zА-Яа-я]+$/,
+            phone: /^\+7\([0-9]{3}\)[0-9]{3}\-[0-9]{4}$/,
+            email: /^[a-z\-\.\_\d]+@[a-z\d]+.[a-z]{2,8}$/,
+        }
+
+        const form = id => {
+            return document.getElementById(id);
+        }
+
+        const validation = elem => {
+            const input = form(elem);
+            const check = regexp[elem].test(input.value);
+
+            if (!check) {
+                form(elem).classList.add('error');
+                form(elem).nextElementSibling.classList.remove('visually-hidden')
+                event.preventDefault();
+            } else {
+                form(elem).classList.remove('error');
+                form(elem).nextElementSibling.classList.add('visually-hidden');
+            }
+        }
+
+
+
+        document.querySelector('#button').addEventListener('click', (event) => {
+            for (let elem in regexp) {
+                validation(elem);
+            }
+        })
+
+    </script>
+</body>
+
+</html>
