@@ -1,0 +1,38 @@
+[
+  {
+    "id_product":1,
+    "name":"ellery x m'o capsule",
+    "price":52.00,
+    "img":"img/item1.jpg"
+  },
+  {
+    "id_product":2,
+    "name":"ellery x m'o capsul",
+    "price":52.00,
+    "img":"img/item2.jpg"
+  },
+  {
+    "id_product":3,
+    "name":"ellery x m'o capsu",
+    "price":52.00,
+    "img":"img/item3.jpg"
+  },
+  {
+    "id_product":4,
+    "name":"ellery x m'o caps",
+    "price":52.00,
+    "img":"img/item4.jpg"
+  },
+  {
+    "id_product":5,
+    "name":"ellery x m'o cap",
+    "price":52.00,
+    "img":"img/item5.jpg"
+  },
+  {
+    "id_product":6,
+    "name":"ellery x m'o",
+    "price":52.00,
+    "img":"img/item6.jpg"
+  }
+]
