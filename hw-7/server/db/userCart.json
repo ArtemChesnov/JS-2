@@ -1,0 +1,20 @@
+{
+    "amount": 46600,
+    "countGoods": 2,
+    "contents": [
+        {
+            "quantity": 2,
+            "id_product": 1,
+            "name": "ellery x m'o capsule",
+            "price": 52,
+            "img": "img/item1.jpg"
+        },
+        {
+            "quantity": 2,
+            "id_product": 2,
+            "name": "ellery x m'o capsul",
+            "price": 52,
+            "img": "img/item2.jpg"
+        }
+    ]
+}
